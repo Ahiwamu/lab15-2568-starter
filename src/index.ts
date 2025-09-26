@@ -1,6 +1,5 @@
 import express from "express";
 import morgan from 'morgan';
-import invalidJsonMiddleware from "../src/middlewares/invalidJsonMiddleware.js"
 import { type Request, type Response} from "express";
 import studentRouter from "./routes/studentRoutes.js";
 import courseRouter from "./routes/courseRoutes.js"
@@ -10,7 +9,6 @@ const app: any = express();
 //Middleware
 app.use(express.json());
 app.use(morgan('dev'));
-app.use(invalidJsonMiddleware);
 
 app.get("/me", (req: Request, res: Response) => {
   res.status(200).json({
