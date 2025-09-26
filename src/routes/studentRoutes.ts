@@ -1,14 +1,10 @@
 import { Router } from "express";
 import { type Request, type Response } from "express";
-import { zStudentPostBody, 
-    zStudentPutBody, 
-    zStudentDeleteBody,
+import {
     zStudentId}
     from "../schemas/studentValidator.js";
 import { students, courses } from "../db/db.js";
 import type { Student, Course } from "../libs/types.js";
-import { success } from "zod";
-import { error } from "console";
 
 
 const router = Router();

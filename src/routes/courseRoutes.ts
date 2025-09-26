@@ -6,9 +6,7 @@ import { zCoursePostBody,
     zCourseId}
     from "../schemas/courseValidator.js";
     import { students, courses } from "../db/db.js";
-    import type { Student, Course } from "../libs/types.js";
-    import { success } from "zod";
-    import { error } from "console";
+    import type { Course } from "../libs/types.js";
     
     const router: Router = Router();
     
